@@ -1,0 +1,42 @@
+
+
+#individual {
+	width: 400px;
+	height: 500px;
+	margin: 20px;
+	padding: 10px;
+	border: 1px solid lightgray;
+}
+
+#picDiv {
+	background-color: rgb(143,185,79);
+	border-radius: 2px;
+}
+
+#backButton {
+	position: relative;
+	top: -155px;
+	left: 5px;
+}
+
+#contactPic {
+	margin: 30px 70px 30px 100px;
+	border-radius: 100%;
+}
+
+#infoList {
+	position: relative;
+	right: 20px;
+}
+
+.contactInfo {
+	border-bottom: 1px solid lightgray;
+	line-height: 40px;
+	padding: 5px;
+	position: relative;
+}
+
+.icons {
+	position: relative;
+	top: 5px;
+}

@@ -20,7 +20,7 @@ class Person extends Component {
 		})
 		this.setState({
 			pic: contact.picture.large,
-			name: contact.name.first,
+			name: contact.name.first + " " + contact.name.last,
 			email: contact.email,
 			phone: contact.phone,
 			cell: contact.cell,
@@ -39,15 +39,18 @@ class Person extends Component {
 
 	render () {
 		return (
-			<div>
-			<li><Link to="/">Home</Link></li>
-			<h2>Person</h2>
-			<img src={this.state.pic}/>
-			<h3><img src="https://img.icons8.com/material/24/000000/person-male.png"/>{this.state.name}</h3>
-			<p><img src="https://img.icons8.com/material/24/000000/filled-message.png"/>{this.state.email} </p>
-			<p><img src="https://img.icons8.com/material/24/000000/cell-phone.png"/>{this.state.cell}</p>
-			<p><img src="https://img.icons8.com/material/24/000000/phone-not-being-used.png"/>{this.state.phone}</p>
-			<p><img src="https://img.icons8.com/ios-glyphs/24/000000/globe.png"/>{this.state.location}</p>
+			<div id="individual">
+				<div id="picDiv">
+				<Link to="/"><img id="backButton" src="https://img.icons8.com/material/24/000000/circled-chevron-left.png"/></Link>
+					<img id="contactPic" src={this.state.pic}/>
+				</div>
+				<ul id="infoList">
+					<li className="contactInfo"><img className="icons" src="https://img.icons8.com/material/24/000000/person-male.png"/>    {this.state.name}</li>
+					<li className="contactInfo"><img className="icons" src="https://img.icons8.com/material/24/000000/filled-message.png"/>    {this.state.email} </li>
+					<li className="contactInfo"><img className="icons" src="https://img.icons8.com/material/24/000000/cell-phone.png"/>    {this.state.cell}</li>
+					<li className="contactInfo"><img className="icons" src="https://img.icons8.com/material/24/000000/phone-not-being-used.png"/>  {this.state.phone}</li>
+					<li className="contactInfo"><img className="icons" src="https://img.icons8.com/ios-glyphs/24/000000/globe.png"/>    {this.state.location}</li>
+				</ul>	
 			</div>
 		)
 	}
